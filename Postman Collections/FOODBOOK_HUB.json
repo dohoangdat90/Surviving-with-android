@@ -1,5 +1,4 @@
 {
-  "variables": [],
   "info": {
     "name": "FOODBOOK_HUB",
     "_postman_id": "0400b47e-5e26-58d6-fd36-b6c9cff19414",
@@ -16,10 +15,12 @@
           "_postman_id": "9c96edbc-003c-0d5f-95d8-6b4b854a0e96",
           "name": "items",
           "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
             "url": {
               "raw": "https://api.foodbook.vn/ipos/ws/xpartner/items?access_token=JHTHWPCE6OCZBW0PBH9XRRBC6JTR1UWQ&pos_parent=NISO&pos_id=3290",
               "protocol": "https",
-              "auth": {},
               "host": [
                 "api",
                 "foodbook",
@@ -35,27 +36,20 @@
                 {
                   "key": "access_token",
                   "value": "JHTHWPCE6OCZBW0PBH9XRRBC6JTR1UWQ",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "pos_parent",
                   "value": "NISO",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "pos_id",
                   "value": "3290",
-                  "equals": true,
-                  "description": ""
+                  "equals": true
                 }
-              ],
-              "variable": []
+              ]
             },
-            "method": "GET",
-            "header": [],
-            "body": {},
             "description": "Thông tin gÓm có:\n- Thông tin th°¡ng hiÇu\n- Thông tin iÃm bán hàng\n- Thông tin món n\n\n![Image](http://foodbook.vn/wp-content/uploads/2017/10/img.png)\nhttp://foodbook.vn/wp-content/uploads/2017/10/img.png\n\n*MÙt bÙ thñc ¡n §y ç gÓm có:\n - Phân lo¡i Category (list_item_type)\n - Phân lo¡i Combo (list_item_combo)\n - Danh sách Món (list_item)\nChú ý: dmItem là mÙt danh sách tr£i ph³ng chéa toàn bÙ các Món. Ta c§n xác Ënh món nào thuÙc vÁ category nào, món nào thuÙc vÁ combo nào.\n1.\tÃ xác Ënh Món X thuÙc Category C nào dña vào X.Item_Type_Id.\n2.\tÃ xác Ënh Món X là món n kèm / Toping cça Món Y dña vào X.Is_Eat_With và X.Item_Id_Eat_With\n3.\tN¿u Toping bË giÛi h¡n (chÉ °ãc chÍn sÑ l°ãng 1 ho·c 2 ¡n vË) thì dña vào C.max_item_choice\n4.\tÃ xác Ënh món X là Combo. Dña vào X.Special_Type = 1.\n5.\tVÛi m×i Món Combo CB s½ có gÓm nhiÁu món n. (VD: Combo bánh 2 lo¡i là chÍn 2 bánh. Trong ó, 1 bánh Tròn trong Nhóm bánh tròn T (T1, T2, T3&) và 1 bánh Vuông trong nhóm V (V1, V2, V3)&)\n6.\tT, V °ãc xác Ënh dña vào list_item_combo.item_id\n"
           },
           "response": [
@@ -63,10 +57,12 @@
               "id": "3b4474f7-3819-5f60-1f00-029917e62945",
               "name": "items",
               "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {},
                 "url": {
                   "raw": "https://api.foodbook.vn/ipos/ws/xpartner/items?access_token=JHTHWPCE6OCZBW0PBH9XRRBC6JTR1UWQ&pos_parent=NISO&pos_id=3290",
                   "protocol": "https",
-                  "auth": {},
                   "host": [
                     "api",
                     "foodbook",
@@ -82,32 +78,24 @@
                     {
                       "key": "access_token",
                       "value": "JHTHWPCE6OCZBW0PBH9XRRBC6JTR1UWQ",
-                      "equals": true,
-                      "description": ""
+                      "equals": true
                     },
                     {
                       "key": "pos_parent",
                       "value": "NISO",
-                      "equals": true,
-                      "description": ""
+                      "equals": true
                     },
                     {
                       "key": "pos_id",
                       "value": "3290",
-                      "equals": true,
-                      "description": ""
+                      "equals": true
                     }
-                  ],
-                  "variable": []
-                },
-                "method": "GET",
-                "header": [],
-                "body": {}
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "json",
-              "_postman_previewtype": "text",
               "header": [
                 {
                   "key": "Content-Type",
@@ -157,19 +145,18 @@
           "_postman_id": "ff682e66-433d-eddc-25e4-d0f5bd2f40c4",
           "name": "order_online",
           "request": {
-            "url": "https://api.foodbook.vn/ipos/ws/xpartner/order_online",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
               "raw": "{\r\n\t\"foodbook_code\": \"ABCD123457\",\r\n\t\"pos_id\": 296,\r\n\t\"pos_parent\": \"FOODBOOK\",\r\n\t\"order_data_item\": [\r\n\t\t{\r\n\t\t\t\"Item_Type_Id\": \"\",\r\n\t\t\t\"Item_Id\": \"SU04\",\r\n\t\t\t\"Item_Name\": \"Caramel Macchiato á (S)\",\r\n\t\t\t\"Price\": 55000,\r\n\t\t\t\"Quantity\": 1,\r\n\t\t\t\"Note\": \"[CMI02] Caramel Machiato (ice)\",\r\n\t\t\t\"mDiscount\": 0,\r\n\t\t\t\"foc\": 0,\r\n\t\t\t\"package_id\": \"\",\r\n\t\t\t\"fix\": 0\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Item_Type_Id\": \"\",\r\n\t\t\t\"Item_Id\": \"SU03\",\r\n\t\t\t\"Item_Name\": \"á (S)\",\r\n\t\t\t\"Price\": 10000,\r\n\t\t\t\"Quantity\": 1,\r\n\t\t\t\"Note\": \"á (S)\",\r\n\t\t\t\"mDiscount\": 0,\r\n\t\t\t\"foc\": 0,\r\n\t\t\t\"package_id\": \"\",\r\n\t\t\t\"fix\": 0\r\n\t\t}\r\n\t],\r\n\t\"coupon_log_id\": \"FBDAT\",\r\n\t\"user_id\": 84967142868,\r\n\t\"username\": \"Thu Hang1\",\r\n\t\"note\": \"Giao sÛm nhé\",\r\n\t\"longitude\": 105.8364506,\r\n\t\"latitude\": 21.0248961,\r\n\t\"to_address\": \"12-14 Nguyen An Ninh phuong 14 Ho Chi Minh Viet Nam\",\r\n\t\"province\": \"Nguyen An Ninh\",\r\n\t\"district\": \"phuong 14\",\r\n\t\"ship_price_real\": 20000,\r\n\t\"distance\": 2.5,\r\n\t\"amount\": 65000,\r\n\t\"total_amount\": 65000,\r\n\t\"PaymentInfo\": {\r\n\t\t\"Payment_Method\": \"PAYMENT_ON_DELIVERY\",\r\n\t\t\"Payment_Info\": \"1\",\r\n\t\t\"Amount\": 10000\r\n\t},\r\n\t\"booking_info\": {\r\n\t\t\"Book_Date\": \"2017-09-21 00:00:00\",\r\n\t\t\"Hour\": 16,\r\n\t\t\"Minute\": 30,\r\n\t\t\"Number_People\": -1,\r\n\t\t\"Note\": \"\"\r\n\t}\r\n}\r\n"
             },
+            "url": "https://api.foodbook.vn/ipos/ws/xpartner/order_online",
             "description": "Notes:\r\n<pre>\r\n{\r\n\t\"foodbook_code\": \"ABCD123456\",\t//option. Mã ¡n hàng do partner sinh ra. Không truyÁn vào thì m·c Ënh hÇ thÑng s½ sinh ra và tr£ l¡i code trong response\r\n\t\"pos_id\": 296,\t\t\t\t//id iÃm bán hàng\r\n\t\"pos_parent\": \"FOODBOOK\",\t\t//id th°¡ng hiÇu\r\n\t\"order_data_item\": [\r\n\t\t{\r\n\t\t\t\"Item_Type_Id\": \"\",\t\t\t\t//option\r\n\t\t\t\"Item_Id\": \"SU04\",\t\t\t\t//id món n trên hÇ thÑng POS\r\n\t\t\t\"Item_Name\": \"Caramel Macchiato á (S)\",\t//tên món n\r\n\t\t\t\"Price\": 55000,\t\t\t\t\t//giá 1 món\r\n\t\t\t\"Quantity\": 1,\t\t\t\t\t//sÑ l°ãng\r\n\t\t\t\"Note\": \"[CMI02] Caramel Machiato (ice)\",\t//ghi chú trên món\r\n\t\t\t\"mDiscount\":0.1,\t\t\t\t//gi£m giá % (n¿u có) m·c Ënh = 0\r\n\t\t\t\"foc\": 0,\t\t\t\t\t//n¿u có gi£m giá thì foc=1. M·c Ënh = 0\r\n\t\t\t\"package_id\": \"\",\t\t\t\t//option\r\n\t\t\t\"fix\": 0\t\t\t\t\t\t//option\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Item_Type_Id\": \"\",\r\n\t\t\t\"Item_Id\": \"SU03\",\r\n\t\t\t\"Item_Name\": \"á (S)\",\r\n\t\t\t\"Price\": 10000,\r\n\t\t\t\"Quantity\": 1,\r\n\t\t\t\"Note\": \"á (S)\",\r\n\t\t\t\"mDiscount\": 0,\r\n\t\t\t\"foc\": 0,\r\n\t\t\t\"package_id\": \"\",\r\n\t\t\t\"fix\": 0\r\n\t\t}\r\n\t],\r\n\t\"coupon_log_id\": \"FBDAT\",\t\t\t\t\t//option: mã gi£m giá (n¿u có)\r\n\t\"user_id\": 84967142868,\t\t\t\t\t//sÑ iÇn tho¡i ng°Ýi ·t\r\n\t\"username\": \"Thu Hang1\",\t\t\t\t\t//tên hiÃn thË\r\n\t\"note\": \"Giao sÛm nhé\",\t\t\t\t\t//ghi chú giao hàng\r\n\t\"longitude\": 105.8364506,\t\t\t\t\t//option\r\n\t\"latitude\": 21.0248961,\t\t\t\t\t\t//option\r\n\t\"to_address\": \"12-14 Nguyen An Ninh phuong 14 Ho Chi Minh Viet Nam\",\t//Ëa chÉ giao hàng §y ç\r\n\t\"province\": \"Nguyen An Ninh\",\t\t\t\t\t//option: qu­n\r\n\t\"district\": \"phuong 14\",\t\t\t\t\t\t//option: huyÇn\r\n\t\"ship_price_real\": 20000,\t\t\t\t\t//phí v­n chuyÃn Partner thÑng nh¥t vÛi user\r\n\t\"distance\": 2.5,\t\t\t\t\t\t\t//option: kho£ng cách °Ûc tính\r\n\t\"amount\": 65000,\t\t\t\t\t\t//không gÓm phí v­n chuyÃn,khuy¿n m¡i \r\n\t\"total_amount\": 65000,\t\t\t\t\t\t//tÕng tiÁn\r\n\t\"PaymentInfo\": {\t\t\t\t\t\t//ph°¡ng théc thanh toán\r\n\t\t\"Payment_Method\": \"PAYMENT_ON_DELIVERY\",\t//COD\r\n\t\t\"Payment_Info\": \"ABXY\", \t\t\t//mã giao dËch thanh toán vÛi ph°¡ng théc khác COD\r\n\t\t\"Amount\": 10000\t\t\t\t//sÑ tiÁn ã thanh toán\r\n\t},\r\n\t\"booking_info\": {\t\t\t\t\t//option. thông tin ·t lËch. N¿u ko có thì bÏ obj này\r\n\t\t\"Book_Date\": \"2017-09-21 00:00:00\",\t\t//ngày ·t\r\n\t\t\"Hour\": 16,\t\t\t\t\t//giÝ ·t\r\n\t\t\"Minute\": 30,\t\t\t\t\t//phút ·t\r\n\t\t\"Number_People\": -1,\t\t\t\t//luôn fix = -1.\r\n\t\t\"Note\": \"\"\t\t\t\t\t//ghi chú ·t lËch\r\n\t},\r\n}\r\n</pre>"
           },
           "response": []
@@ -185,19 +172,18 @@
           "_postman_id": "c11f68e5-af39-eedd-14dc-742b21a639cd",
           "name": "KiÃm tra mã Voucher / Tích iÃm",
           "request": {
-            "url": "https://apitest.foodbook.vn/example/partner/callback/voucher",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
               "raw": "{\r\n\t\"event_id\": 2,\r\n\t\"event\": \"using_voucher\",\r\n\t\"timestamp\": \"1504858077378\",\r\n\t\"voucher_request\": {\r\n\t\t\"Pos_Parent\": \"FOODBOOK\",\r\n\t\t\"Pos_Id\": 296,\r\n\t\t\"Coupon_Code\": \"CM1234512345\",\r\n\t\t\"Sale_Tran_Id\": \"29802\",\r\n\t\t\"Created_At\": \"2017-09-08 15:07:56\",\r\n\t\t\"Voucher_Order_Line\": [\r\n\t\t\t{\r\n\t\t\t\t\"Item_Type_Id\": \"SOUP\",\r\n\t\t\t\t\"Item_Id\": \"SU01\",\r\n\t\t\t\t\"Description\": \"Súp Vân hoa Long H£i 2\",\r\n\t\t\t\t\"Quantity\": 1,\r\n\t\t\t\t\"Amount\": 18000\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"Item_Type_Id\": \"SOUP\",\r\n\t\t\t\t\"Item_Id\": \"SU02\",\r\n\t\t\t\t\"Description\": \"Té h÷ NgÍc LÙ\",\r\n\t\t\t\t\"Quantity\": 1,\r\n\t\t\t\t\"Amount\": 20001\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n}\r\n"
             },
+            "url": "https://apitest.foodbook.vn/example/partner/callback/voucher",
             "description": "(Hub gÍi vào callback cça partner)\n\nRequest:\n<pre>\n{\n\t\"event_id\": 2,\n\t\"event\": \"using_voucher\",\n\t\"timestamp\": \"1504858077378\",\n\t\"voucher_request\": {\n\t\t\"Pos_Parent\": \"FOODBOOK\",\n\t\t\"Pos_Id\": 296,\n\t\t\"Coupon_Code\": \"CM1234512345\",\n\t\t\"Sale_Tran_Id\": \"29802\",\n\t\t\"Created_At\": \"2017-09-08 15:07:56\",\n\t\t\"Voucher_Order_Line\": [\n\t\t\t{\n\t\t\t\t\"Item_Type_Id\": \"SOUP\",\n\t\t\t\t\"Item_Id\": \"SU01\",\n\t\t\t\t\"Description\": \"Súp Vân hoa Long H£i 2\",\n\t\t\t\t\"Quantity\": 1,\n\t\t\t\t\"Amount\": 18000\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"Item_Type_Id\": \"SOUP\",\n\t\t\t\t\"Item_Id\": \"SU02\",\n\t\t\t\t\"Description\": \"Té h÷ NgÍc LÙ\",\n\t\t\t\t\"Quantity\": 1,\n\t\t\t\t\"Amount\": 20001\n\t\t\t}\n\t\t]\n\t}\n}\n</pre>\n\nResponse:\n<pre>\n{\n\t\"event_id\": 2,\n\t\"event\": \"using_voucher\",\n\t\"timestamp\": \"1504858077378\",\n\t\"voucher_request\": {\n\t\t\"Pos_Parent\": \"FOODBOOK\",\n\t\t\"Pos_Id\": 296,\n\t\t\"Coupon_Code\": \"CM1234512345\",\n\t\t\"Sale_Tran_Id\": \"29802\",\n\t\t\"Created_At\": \"2017-09-08 15:14:15\",\n\t\t\"Voucher_Order_Line\": [\n\t\t\t{\n\t\t\t\t\"Item_Type_Id\": \"SOUP\",\n\t\t\t\t\"Item_Id\": \"SU01\",\n\t\t\t\t\"Description\": \"Súp Vân hoa Long H£i 2\",\n\t\t\t\t\"Quantity\": 2,\n\t\t\t\t\"Amount\": 18000\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"Item_Type_Id\": \"SOUP\",\n\t\t\t\t\"Item_Id\": \"SU02\",\n\t\t\t\t\"Description\": \"Té h÷ NgÍc LÙ\",\n\t\t\t\t\"Quantity\": 1,\n\t\t\t\t\"Amount\": 20001\n\t\t\t}\n\t\t],\n\t\t\"Membership_Id\": \"84967142868\", \n\t\t\"Membership_Name\": \"DAT\",\n\t\t\"Message\": \"Ten campagin\",\n\t\t\"Code\": 4,\n\t\t\"Type\": 0,\n\t\t\"Discount_Amount\": 19000,\n\t\t\"Discount_Description\": \"Noi dung show cho nguoi dung\",\n\t\t\"Date_Start\": \"2017-09-08 15:14:16\",\n\t\t\"Date_End\": \"2017-09-08 15:14:16\",\n\t\t\"Is_Coupon\": 1,\n\t\t\"Only_Coupon\": 1\n\t}\n}\n\n</pre>\n\n\nNotes:\n<pre>\n{\n\t\"event_id\": 2,\t\t\t\t\t//client switch theo bi¿n này Ã xí lý logic code\n\t\"event\": \"using_voucher\",\t\t\t\t//tên event\t\n\t\"timestamp\": \"1504858077378\",\t\t\t//ThÝi gian milisec\n\t\"voucher_request\": {\t\t\n\t\t\"Pos_Parent\": \"FOODBOOK\",\t\t\t//tên th°¡ng hiÇu\n\t\t\"Pos_Id\": 296,\t\t\t\t\t//id iÃm bán hàng\n\t\t\"Coupon_Code\": \"CM1234512345\",\t\t//mã gi£m giá (cça Ñi tác)\n\t\t\"Sale_Tran_Id\": \"29802\",\t\t//id giao dËch d°Ûi máy POS. Unique: pos_parent + sale_tran_id\n\t\t\"Created_At\": \"2017-09-08 15:14:15\",\t\t\t\t//thÝi gian Thu ngân nh­p mã\n\t\t\"Voucher_Order_Line\": [\t\t\t\t\t\t//danh sách món n\n\t\t\t{\n\t\t\t\t\"Item_Type_Id\": \"SOUP\",\t\t\t\t//nhóm món\n\t\t\t\t\"Item_Id\": \"SU01\",\t\t\t\t//id món n\n\t\t\t\t\"Description\": \"Súp Vân hoa Long H£i 2\",\t\t//tên món n\n\t\t\t\t\"Quantity\": 2,\t\t//sÑ l°ãng\n\t\t\t\t\"Amount\": 18000\t\t//tiÁn (sau khi ã nhân sÑ l°ãng  vd món này SL 2 chÉ có giá 9k)\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"Item_Type_Id\": \"SOUP\",\n\t\t\t\t\"Item_Id\": \"SU02\",\n\t\t\t\t\"Description\": \"Té h÷ NgÍc LÙ\",\n\t\t\t\t\"Quantity\": 1,\n\t\t\t\t\"Amount\": 20001\n\t\t\t}\n\t\t],\n\t\t\"Membership_Id\": \"84967142868\", \t//ST user sí dång voucher. Có d¡ng 84xxxxxxxx \n\t\t\"Membership_Name\": \"DAT\",\t\t//tên user sí dång voucher\n\t\t\"Message\": \"Hãp tác vÛi Meete\", \t\t//Tên ch°¡ng trình voucher Ã POS group vào\n\t\t\"Code\": 4,\t\t\t\t// 1 off, 2 used, 3 expire, 4 OK  °ãc phép sí dång\n\t\t\"Type\": 0,\t\t\t\t// 1 s°	 du#ng 1 lâ n, 0 s°	 du#ng nhiê u lâ n  m·c Ënh = 0\n\t\t\"Discount_Amount\": 19000, \t\t//SÑ tiÁn user °ãc gi£m giá. N¿u chÉ tích diÃm thì gi£m giá = 0\n\t\t\"Discount_Description\": \"Meete Gi£m giá 50%\",\t // NÙi dung show cho thu ngân bi¿t\n\t\t\"Date_Start\": \"2017-09-08 15:14:16\", \t// H¡n sí dång voucher. Có thÃ l¥y thÝi gian current.\n\t\t\"Date_End\": \"2017-09-08 15:14:16\",\t // H¡n sí dång voucher. Có thÃ l¥y thÝi gian current.\n\t\t\"Is_Coupon\": 1,\t\t// N¿u gi£m giá tiÁn = 1. N¿u gi£m giá % = 0\n\t\t\"Only_Coupon\": 1\t//Có áp dång Óng thÝi các ch°¡ng trình vÛi POS hay không ? M·c Ënh =1 (không áp dång)\n\t}\n}\n</pre>"
           },
           "response": []
@@ -213,24 +199,48 @@
           "_postman_id": "db8b0cbb-658e-5653-6de1-2d6c9954ef81",
           "name": "KiÃm tra hóa ¡n ã thanh toán ch°a",
           "request": {
-            "url": "https://apitest.foodbook.vn/example/partner/callback/payment",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
               "raw": "{\r\n\t\"event_id\": 6,\r\n\t\"event\": \"charge_history\",\r\n\t\"timestamp\": \"1504846925185\",\r\n\t\"charge_history\": {\r\n\t\t\"pos_parent\": \" FOODBOOK \",\r\n\t\t\"pos_id\": 297,\r\n\t\t\"merchant_id\": \"IPOSDOHOANGDATZW9RRZQLQZCU89EDIX\",\r\n\t\t\"tran_id\": \"10041481096023316\",\r\n\t\t\"payment_method\": \"MOMO1\"\r\n\t}\r\n}\r\n"
             },
+            "url": "https://apitest.foodbook.vn/example/partner/callback/payment",
             "description": "(Hub gÍi vào callback cça partner)\n\nRequest:\n<pre>\n{\n\t\"event_id\": 6,\n\t\"event\": \"charge_history\",\n\t\"timestamp\": \"1504846925185\",\n\t\"charge_history\": {\n\t\t\"pos_parent\": \" FOODBOOK \",\n\t\t\"pos_id\": 297,\n\t\t\"merchant_id\": \"IPOSDOHOANGDATZW9RRZQLQZCU89EDIX\",\n\t\t\"tran_id\": \"10041481096023316\",\n\t\t\"payment_method\": \"MOMO1\"\n\t}\n}\n\n</pre>\n\nResponse:\n<pre>\n{\n\t\"event_id\": 6,\n\t\"event\": \"charge_history\",\n\t\"timestamp\": \"1504846925185\",\n\t\"charge_history\": {\n\t\t\"pos_parent\": \"FOODBOOK\",\n\t\t\"pos_id\": 297,\n\t\t\"merchant_id\": \" IPOSDOHOANGDATZW9RRZQLQZCU89EDIX \",\n\t\t\"tran_id\": \"1502599639474\",\n\t\t\"payment_method\": \" MOMO1\",\n\t\t\"state\": \"SUCCESS\",\n\t\t\"response_message\": \"Noi dung se hien thi cho nhan vien\",\n\t\t\"tran_id_of_parner\": \"AB12\",\n\t\t\"paid_amount\": 90800.5,\n\t\t\"paid_discount\": 0,\n\t\t\"charged_time\": \"2017-09-08 11:59:45\",\n\t\t\"customer_phone\": 84967142868,\n\t\t\"customer_name\": \"Ten khach hang\"\n\t}\n}\n\n</pre>\n\n\nNotes:\n<pre>\n{\n\t\"event_id\": 6, \t\t\t\t\t//client switch theo bi¿n này Ã xí lý logic code\n\t\"event\": \"charge_history\",\t\t\t//tên event\n\t\"timestamp\": \"1504846925185\",\t\t//ThÝi gian milisec\n\t\"charge_history\": {\n\t\t\"pos_parent\": \"FOODBOOK\",\t\t\t\t//tên th°¡ng hiÇu\n\t\t\"pos_id\": 297, \t\t\t\t\t\t//id iÃm bán hàng\n\t\t\"merchant_id\": \" IPOSDOHOANGDATZW9RRZQLQZCU89EDIX \",\t//id iÃm bán hàng (có thanh toán)\n\t\t\"tran_id\": \"1502599639474\",\t\t//id giao dËch d°Ûi máy POS. Unique: pos_parent +tran_id\n\t\t\"payment_method\": \" MOMO1\",\",\t//ph°¡ng théc thanh toán cça Partner \n\t\t\"state\": \"SUCCESS\",\t\t\t// SUCCESS | FAIL\n\t\t\"response_message\": \"Thanh toán thành công\",\t\t// NÙi dung hiÃn thË cho nhân viên\n\t\t\"tran_id_of_parner\": \"AB12\",\t\t//mã giao dËch cça Partner. POS s½ l°u l¡i Ã tiÇn Ñi soát\n\t\t\"paid_amount\": 90800.5,\t\t//ã thanh toán bao nhiêu. KiÃu SÑ th­p phân\n\t\t\"paid_discount\": 0, \t\t\t//ST user thanh toán. Có d¡ng 84xxxxxxxx\n\t\t\"charged_time\": \"2017-09-08 11:59:45\",\t\t//giÝ thanh toán\n\t\t\"customer_phone\": 84967142868, \t\t\t//ST user thanh toán. Có d¡ng 84xxxxxxxx\n\t\t\"customer_name\": \"Ten khach hang\"\n\t}\n}\n\n</pre>"
           },
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "b41edcad-ecd5-5e4c-9f1e-09bf2f0dd3ce",
+      "name": "https://apitest.foodbook.vn/ipos/ws/xpartner/order_online",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": true
+          },
+          {
+            "key": "access_token",
+            "value": "D0FBGS3NKZUUFZCIURBDKPR9N5RRML7K"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"pos_id\": 297,\r\n    \"pos_parent\": \"FOODBOOK\",\r\n    \"order_data_item\": [\r\n        {\r\n            \"Item_Type_Id\": \"\",\r\n            \"Item_Id\": \"MIY\",\r\n            \"Item_Name\": \"Caramel Macchiato á (S)\",\r\n            \"Price\": 55000,\r\n            \"Quantity\": 1,\r\n            \"Note\": \"[CMI02] Caramel Machiato (ice)\",\r\n            \"mDiscount\": 0,\r\n            \"foc\": 0,\r\n            \"package_id\": \"\",\r\n            \"fix\": 0\r\n        },\r\n        {\r\n            \"Item_Type_Id\": \"\",\r\n            \"Item_Id\": \"STB\",\r\n            \"Item_Name\": \"Caramel Macchiato á (S)\",\r\n            \"Price\": 55000,\r\n            \"Quantity\": 1,\r\n            \"Note\": \"[CMI02] Caramel Machiato (ice)\",\r\n            \"mDiscount\": 0,\r\n            \"foc\": 0,\r\n            \"package_id\": \"\",\r\n            \"fix\": 0\r\n        },{\r\n            \"Item_Type_Id\": \"\",\r\n            \"Item_Id\": \"CHLE\",\r\n            \"Item_Name\": \"Caramel Macchiato á (S)\",\r\n            \"Price\": 55000,\r\n            \"Quantity\": 1,\r\n            \"Note\": \"[CMI02] Caramel Machiato (ice)\",\r\n            \"mDiscount\": 0,\r\n            \"foc\": 0,\r\n            \"package_id\": \"\",\r\n            \"fix\": 0\r\n        }\r\n    ],\r\n    \"coupon_log_id\": \"FBDAT\",\r\n    \"user_id\": 84967142868,\r\n    \"username\": \"Thu Hang1\",\r\n    \"note\": \"Giao sÛm nhé\",\r\n    \"longitude\": 105.8364506,\r\n    \"latitude\": 21.0248961,\r\n    \"to_address\": \"12-14 Nguyen An Ninh phuong 14 Ho Chi Minh Viet Nam\",\r\n    \"province\": \"Nguyen An Ninh\",\r\n    \"district\": \"phuong 14\",\r\n    \"ship_price_real\": 20000,\r\n    \"distance\": 2.5,\r\n    \"amount\": 65000,\r\n    \"total_amount\": 65000,\r\n    \"adapt_to_online\":1,\r\n    \"discount_extra\":0.1,\r\n    \"service_charge\":0.2,\r\n    \"vat_tax_rate\":0.3,\r\n    \"PaymentInfo\": {\r\n        \"Payment_Method\": \"LALA_PAYMENT\",\r\n        \"Payment_Info\": \"123\",\r\n        \"Amount\": 10000\r\n    }\r\n}"
+        },
+        "url": "https://apitest.foodbook.vn/ipos/ws/xpartner/order_online",
+        "description": null
+      },
+      "response": []
     }
   ]
 }
